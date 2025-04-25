@@ -1,521 +1,644 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <title>Mehraj Pathan Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS (Optional, for interactive components) -->
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+
     <link rel="stylesheet" href="css/aos.css">
+
     <link rel="stylesheet" href="css/ionicons.min.css">
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* Custom styles */
-        .about-mf .box-shadow-full {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+      /*======================================
+//--//-->   ABOUT
+======================================*/
+
+      .about-mf .box-shadow-full {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .about-mf .about-img {
+  margin-bottom: 0rem; 
+  margin-top: 10px;;/* or any value you prefer */
+}
+
+      .about-mf .about-img img {
+        margin-left: 1px;
+      }
+
+      .skill-mf .progress {
+        /* background-color: #cde1f8; */
+        margin: 0.5rem 0 1.2rem;
+        border-radius: 0;
+        height: 0.7rem;
+      }
+
+      .skill-mf .progress .progress-bar {
+        height: 0.7rem;
+        background-color: #ffbd39;
+      }
+
+      /* Animation styles */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
+
+      #typing-animation:before {
+        content: "";
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ccc;
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
         }
 
-        .skill-mf .progress {
-            margin: 0.5rem 0 1.2rem;
-            border-radius: 0;
-            height: 0.7rem;
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes typing-cursor {
+        from {
+          width: 5px;
         }
 
-        .skill-mf .progress .progress-bar {
-            height: 0.7rem;
-            background-color: #ffbd39;
+        to {
+          width: 0;
+        }
+      }
+
+      /* project image zoom effect */
+
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
+
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+
+      @media screen and (orientation: portrait) {
+        body {
+          margin-left: 5%;
+          margin-right: 5%;
         }
 
-        /* Animation styles */
-        #typing-animation {
-            position: relative;
-            font-size: 30px;
-            font-weight: bold;
-            color: rgb(255, 255, 255);
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 3s steps(20, end) infinite;
+        .order-md-last {
+          visibility: hidden;
         }
 
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
+        .about-img img {
+          content: url("images/me.png");
         }
-
-        .zoom-effect {
-            overflow: hidden;
-            transition: transform 0.3s ease-out;
-        }
-
-        .zoom-effect:hover {
-            transform: scale(1.1);
-        }
+      }
     </style>
 
-</head>
+  </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Mehraj Pathan</a>
-            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span>
-                Menu
-            </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Mehraj Pathan</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+          Menu
+        </button>
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#home-section" class="nav-link">
-                            <span>Home</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about-section" class="nav-link">
-                            <span>About</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume-section" class="nav-link">
-                            <span>Resume</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact-section" class="nav-link">
-                            <span>Contact</span></a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link">
+                <span>Home</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link">
+                <span>About</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#education-section" class="nav-link">
+                <span>Education</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills-section" class="nav-link">
+                <span>Skills</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link">
+                <span>Resume</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#project-section" class="nav-link">
+                <span>Project</span></a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link">
+                <span>Contact</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#send-message" class="nav-link">
+                <span>Message me</span></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-
     <section id="home-section" class="hero">
-        <div class="home-slider owl-carousel">
-            <div class="slider-item">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
-                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me.png);">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="one-forth d-flex align-items-center ftco-animate">
-                            <div class="text">
-                                <span class="subheading">Hello!</span>
-                                <h1 class="mb-4 mt-3">I'm <span>Mehraj Pathan</span></h1>
-                                <span id="typing-animation"></span>
-                                <script>
-                                    const typingAnimationElement = document.getElementById('typing-animation');
-                                    const typingTexts = ['Software Engineer', 'Web Developer', 'Java Full Stack Developer'];
-                                    function playTypingAnimation(text) {
-                                        for (let i = 0; i < text.length; i++) {
-                                            setTimeout(() => {
-                                                typingAnimationElement.textContent += text[i];
-                                            }, i * 100);
-                                        }
-                                        setTimeout(() => {
-                                            typingAnimationElement.textContent = '';
-                                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                                        }, text.length * 100);
-                                    }
-                                    playTypingAnimation(typingTexts[0]);
-                                </script>
-                                <p>
-                                    <a href="https://www.instagram.com/m3hr4j_kh4n/" class="btn btn-primary py-3 px-4">My Instagram</a>
-                                    <a href="https://www.linkedin.com/in/mehraj-pathan-a03532308/" class="btn btn-white btn-outline-white py-3 px-4">My LinkedIn</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+              <div class="one-third order-md-top img" 
+              style="background-image: url(images/me.png); height: 60vh; background-size: contain; background-repeat: no-repeat; background-position: center;">
+           <div class="overlay"></div>
+         </div>
+         
+              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm
+                    <span>Mehraj Pathan</span></h1>
+
+                  <!-- Element to contain animated typing -->
+                  <span id="typing-animation"></span>
+
+                  <script>
+                    // Initialize the typing animation
+                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                    // Create an array of typing text
+                    const typingTexts = ['Software Developer     ', 'Web Developer     ', 'Software Engineer    '];
+
+                    // Create a function to display the typing animation for a given text
+                    function playTypingAnimation(text) {
+                      // Loop through each character and add it to the element
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 100); // Decreased delay to speed up the typing animation
+                      }
+
+                      // Once the animation is complete, reset the text and start over
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 100); // Adjusted delay accordingly
+                    }
+
+                    // Start the typing animation loop
+                    playTypingAnimation(typingTexts[0]);
+                  </script><br><br>
+                  <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of Project</h2> -->
+                  <!-- <br> -->
+                  <p>
+                    <a href="https://www.instagram.com/m3hr4j_kh4n/" class="btn btn-primary py-3 px-4">My Instagram</a>
+                    <a href="https://www.linkedin.com/in/mehraj-pathan-53617624b?" class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-5 d-flex">
-                <div class="img-about img d-flex align-items-stretch">
-                    <div class="overlay">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-5">
-                                <div class="about-img">
-                                    <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-7">
-                                <div class="about-info">
-                                    <p>
-                                        <span class="title-s">Name:</span>
-                                        <span>Mehraj Pathan</span>
-                                    </p>
-                                    <p>
-                                        <span class="title-s">Job Role:</span>
-                                        <span>Software/Web Developer</span>
-                                    </p>
-                                    <p>
-                                        <span class="title-s">Address:</span>
-                                        <span>Ambajogai, Dist. Beed, MH, 431517</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container about-mf box-shadow-full py-5">
+    <div class="row">
+      <!-- Section Heading -->
+      <div class="col-12 heading-section text-center ftco-animate mb-5">
+        <h1 class="big big-2">About</h1>
+        <h2 class="mb-4">About Me</h2>
+        <div class="underline mx-auto"></div>
+      </div>
 
-                        <div class="skill-mf">
-    <p class="title-s">Technical Skills:</p>
-    <ul>
-        <li><strong>Front-End Skills:</strong> React, JSP, HTML, CSS, JavaScript</li>
-        <li><strong>Back-End Skills:</strong> Spring Boot, ORM (Object-Relational Mapping), Hibernate, Java, C++, Python</li>
-        <li><strong>Web Development:</strong> Full Stack Development</li>
-        <li><strong>Databases:</strong> MySQL, Microsoft Excel, Tally ERP</li>
-        <li><strong>Artificial Intelligence:</strong> Basic knowledge of AI Prompts</li>
-        <li><strong>Design Tools:</strong> Adobe Photoshop, Canva</li>
-        <li><strong>Operating Systems:</strong> Linux, Windows</li>
-        <li><strong>Productivity:</strong> 40 WPS Typing</li>
-    </ul>
-</div>
-
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-                <div class="row justify-content-start pb-3">
-                    <div class="col-md-12 heading-section ftco-animate">
-                        <h1 class="big">About</h1>
-                        <h2 class="mb-4">About Me</h2>
-                        <p>Hardworking and passionate Software Engineer & Web Developer with a strong foundation in Java and web technologies. Eager to contribute to innovative projects and help teams achieve their goals.</p>
-                        <ul class="about-info mt-4 px-md-0 px-2">
-                            <li class="d-flex">
-                                <span>Profile:</span>
-                                <span>Full Stack Developer</span>
-                            </li>
-                            <li class="d-flex">
-                                <span>Education:</span>
-                                <span>Bachelor of Computer Applications (BCA)</span>
-                            </li>
-                            <li class="d-flex">
-                                <span>Languages:</span>
-                                <span>English, Hindi, Urdu, Marathi</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <!-- Left Column: Image & Basic Info -->
+      <div class="col-md-6 col-lg-5 d-flex align-items-stretch">
+        <div class="about-info list-unstyled px-md-0 px-2">
+          <div class=" mb-4">
+         
+          <ul class="about-info list-unstyled px-md-0 px-2">
+            <li><strong class="mb-2">Name:</strong> Mehraj Pathan</li>
+            <li><strong class="mb-2">Job Role:</strong> Java Full Stack & Web Developer</li>
+            <li><strong class="mb-2">Address:</strong> Katraj, Pune MH</li>
+          </ul>
         </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Bio & Additional Info -->
+      <div class="col-md-6 col-lg-7 pl-lg-5 d-flex flex-column justify-content-center">
+        <div class="mb-4">
+          <p>
+            I’m a hardworking and passionate Java Full Stack Developer with strong organizational and problem-solving skills. I specialize in Java, Spring Boot, JSP, React, and MySQL, and have developed real-world projects like a Student ID Generator, Marksheet Generator, and Library Management System. I thrive in collaborative environments and enjoy exploring new technologies to build functional and innovative solutions.
+          </p>
+        </div>
+
+        <ul class="about-info list-unstyled px-md-0 px-2">
+          <li class="mb-2"><strong>Profile:</strong> Java Full Stack Developer</li>
+          <li class="mb-2"><strong>Domain:</strong> Software & Web Development</li>
+           <li class="mb-2"><strong>Languages:</strong> English, Hindi, Marathi, Urdu</li>
+          <li class="mb-2"><strong>Soft Skills:</strong> Problem Solving, Teamwork, Critical Thinking, Responsiveness</li>
+          <li class="mb-2"><strong>Hobby:</strong> Traveling, Ethical Hacking, Driving, Riding</li>
+        </ul>
+
+       
+      </div>
     </div>
+  </div>
+</section>
+<section class="ftco-section ftco-no-pb" id="education-section">
+  <div class="container">
+      <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+              <h1 class="big big-2">Education</h1>
+              <h2 class="mb-4">Education</h2> <!-- BIG faded text -->
+              <div class="underline mx-auto"></div>
+          </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+          <div class="col-md-6">
+              <div class="resume-wrap ftco-animate">
+                  <span class="date">2021 - 2024</span>
+                  <h2>Bachelor of Computer Applications (BCA)</h2>
+                  <span class="position">College of Computer Science & IT, Latur</span>
+                  <p class="mt-4">CGPA: 8.2 (Grade A+)</p>
+              </div>
+          </div>
+
+          <div class="col-md-6">
+              <div class="resume-wrap ftco-animate">
+                  <span class="date">2018 - 2020</span>
+                  <h2>Higher Secondary School Certificate (HSC)</h2>
+                  <span class="position">YCM College, Ambajogai</span>
+                  <p class="mt-4">Grade: 64.15% (First Class)</p>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 
-   <section class="ftco-section ftco-no-pb" id="resume-section">
-    <div class="container">
-        <div class="row justify-content-center pb-5">
-            <div class="col-md-10 heading-section text-center ftco-animate">
-                <h1 class="big big-2">Resume</h1>
-                <h2 class="mb-4">Projects</h2>
-                <p>Here are some of the projects I have worked on:</p>
-            </div>
+    
+    
+ 
+    <section class="ftco-section" id="skills-section">
+      <div class="container">
+        <div class="heading-section text-center ftco-animate mb-5">
+          <h1 class="big big-2">Skills</h1>
+          <h2 class="mb-4">Skills</h2>
+          <div class="underline mx-auto"></div>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="resume-wrap ftco-animate">
-                    <span class="date">Jan 2023 - Feb 2023</span>
-                    <h2>Student ID Card Generator</h2>
-                    <p class="mt-4">Developed a web-based application for generating and managing student ID cards, featuring Admin and Student modules using PHP, JavaScript, HTML, CSS, and SQL.</p>
-                    <p>
-                        <a href="https://github.com/yourusername/student-id-card-generator" class="btn btn-primary py-2 px-4">View Project</a>
-                    </p>
-                </div>
+    
+        <div class="row mt-5 g-4">
+          <!-- Programming Languages -->
+          <div class="col-md-6">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-header bg-primary"><h5>Programming Languages</h5></div>
+              <div class="card-body">
+                <p>Java</p><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 85%;">85%</div></div>
+                <p>Python</p><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 70%;">70%</div></div>
+                <p>C++</p><div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 75%;">75%</div></div>
+              </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="resume-wrap ftco-animate">
-                    <span class="date">Nov 2023 - Jan 2024</span>
-                    <h2>Student Marksheet Generator</h2>
-                    <p class="mt-4">Created a comprehensive marksheet generator web application that streamlines the process of managing student academic records using PHP, JavaScript, HTML, CSS, and SQL.</p>
-                    <p>
-                        <a href="https://github.com/yourusername/student-mark-sheet-generator" class="btn btn-primary py-2 px-4">View Project</a>
-                    </p>
-                </div>
+          </div>
+    
+          <!-- Web Development -->
+          <div class="col-md-6">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-header bg-primary"><h5>Web Development</h5></div>
+              <div class="card-body">
+                <p>HTML/CSS/JS</p><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 90%;">90%</div></div>
+                <p>React</p><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 75%;">75%</div></div>
+                <p>Spring Boot</p><div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 80%;">80%</div></div>
+                <p>JSP</p><div class="progress mb-3"><div class="progress-bar bg-danger" style="width: 70%;">70%</div></div>
+              </div>
             </div>
-        </div> 
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="resume-wrap ftco-animate">
-                    <span class="date">Apr 2025</span>
-                    <h2>Library Management System</h2>
-                    <p class="mt-4">Designed and developed a web-based Library Management System that enables educational institutions to efficiently manage library resources and services using Spring Boot, Java, JSP, and ORM.</p>
-                    <p>
-                        <a href="https://github.com/yourusername/library-management-system" class="btn btn-primary py-2 px-4">View Project</a>
-                    </p>
-                </div>
+          </div>
+    
+          <!-- Database -->
+          <div class="col-md-6">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-header bg-primary"><h5>Database Management</h5></div>
+              <div class="card-body">
+                <p>MySQL</p><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 90%;">90%</div></div>
+                <p>ORM (Hibernate)</p><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 75%;">75%</div></div>
+              </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="resume-wrap ftco-animate">
-                    <span class="date">Jan 2025</span>
-                    <h2>Portfolio Website</h2>
-                    <p class="mt-4">Developed a personal portfolio website to showcase my skills, projects, and professional achievements as a Software Engineer and Web Developer.</p>
-                    <p>
-                        <a href="https://github.com/yourusername/portfolio-website" class="btn btn-primary py-2 px-4">View Project</a>
-                    </p>
-                </div>
+          </div>
+    
+          <!-- Tools -->
+          <div class="col-md-6">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-header bg-primary"><h5>Tools & Productivity</h5></div>
+              <div class="card-body">
+                <p>Adobe Photoshop</p><div class="progress mb-3"><div class="progress-bar bg-success" style="width: 90%;">90%</div></div>
+                <p>Typing Speed (40 WPM)</p><div class="progress mb-3"><div class="progress-bar bg-info" style="width: 90%;">90%</div></div>
+                <p>Basic AI Knowledge</p><div class="progress mb-3"><div class="progress-bar bg-warning" style="width: 60%;">60%</div></div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+    
+    
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+          <div class="row justify-content-center pb-5">
+              <div class="col-md-10 heading-section text-center ftco-animate">
+                  <h1 class="big big-2">Resume</h1>
+                  <h2 class="mb-4">Resume</h2>
+                  <p>Hardworking and passionate Software Engineer & Web Developer with a strong foundation in Java and full-stack development. Proficient in front-end technologies such as React, HTML, CSS, and JavaScript, and back-end technologies including Spring Boot, Hibernate, and SQL. Eager to apply my skills in a dynamic team environment to achieve company goals.</p>
+              </div>
+          </div>
+  
+          <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center ftco-animate">
+                  <p>
+                      <a href="https://drive.google.com/file/d/1aWik_t8mcjytVGU_8LpXDeyqYr_55PnT/view" class="btn btn-primary py-4 px-5">Download CV</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
 
-            <div class="row">
-                <h1 class="big-4">Education</h1>
-                <div class="underline"></div>
+      <section class="ftco-section ftco-no-pb" id="project-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Projects</h1> <!-- BIG faded text -->
+                    <h2 class="mb-4">Projects</h2> <!-- Normal heading -->
+                    <div class="underline mx-auto"></div>
+                </div>
             </div>
+    
             <br>
-
+    
             <div class="row">
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">2021-2024</span>
-                        <h2>Bachelor of Computer Applications</h2>
-                        <span class="position">COCSIT College, Latur</span>
-                        <p class="mt-4">CGPA: 8.2 (Grade A+)</p>
+                        <span class="date">Student Marksheet Generator</span>
+                        <p class="mt-4">Developed a comprehensive marksheet generator web application that streamlines the process of creating and managing student academic records. This project demonstrates expertise in building robust and intuitive web applications.</p>
+                        <a href="https://github.com/yourusername/StudentMarksheetGenerator" class="btn btn-primary mt-3">View Project</a>
                     </div>
                 </div>
-
+    
                 <div class="col-md-6">
                     <div class="resume-wrap ftco-animate">
-                        <span class="date">2019</span>
-                        <h2>Higher Secondary School</h2>
-                        <span class="position">YCM College, Ambajogai</span>
-                        <p class="mt-4">Grade: 64.15%</p>
+                        <span class="date">Student ID Card Generator</span>
+                        <p class="mt-4">Created a web-based application for generating and managing student ID cards, featuring Admin and Student modules. This project showcases proficiency in full-stack development and the ability to design functional web applications.</p>
+                        <a href="https://github.com/yourusername/StudentIDCardGenerator" class="btn btn-primary mt-3">View Project</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-6 text-center ftco-animate">
-                    <p>
-                        <a href="https://drive.google.com/file/d/1aWik_t8mcjytVGU_8LpXDeyqYr_55PnT/view" class="btn btn-primary py-4 px-5">Download CV</a>
-                    </p>
+    
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">Library Management System</span>
+                        <p class="mt-4">Designed and developed a web-based Library Management System that enables educational institutions to efficiently manage library resources and services. This application features a user-friendly interface for librarians.</p>
+                        <a href="https://github.com/yourusername/LibraryManagementSystem" class="btn btn-primary mt-3">View Project</a>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">Portfolio Website</span>
+                        <p class="mt-4">Developed a personal portfolio website to showcase skills, projects, and professional achievements as a Software Engineer and Web Developer. This serves as a digital resume for potential employers.</p>
+                        <a href="https://mehraj7744.github.io/MehrajPortfolio" class="btn btn-primary mt-3">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+      
+     
 
-    <!-- <section class="ftco-section" id="project-section"> <div class="container"> <div class="row justify-content-center mb-5 pb-5"> <div class="col-md-7 heading-section text-center ftco-animate"> <h1 class="big big-2">Projects</h1> <h2 class="mb-4">Projects</h2> <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p> </div> </div> <div class="row d-flex"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a> </h3> <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a> </h3> <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer Project.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a> </h3> <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> </div> </div> </div> </div> <br> <div class="row d-flex justify-content-center"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a> </h3> <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a> </h3> <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> </div> </div> </div> </div> </div> </section> -->
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="hid" style="visibility:hidden">
-        <div class="container">
+      <div class="container">
           <div class="row d-md-flex align-items-center">
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                 
-                 
-                </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                      <div class="text">
+                          <strong class="number" data-number="4">0</strong>
+                          <span>Projects Completed</span>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                
-                </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                      <div class="text">
+                          <strong class="number" data-number="4">0</strong>
+                          <span>Languages Known</span>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="1000">0</strong> <span>Mentored Students</span> </div> </div> </div> <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="500">0</strong> <span>Cups of coffee</span> </div> </div> </div> -->
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                      <div class="text">
+                          <strong class="number" data-number="5">0</strong>
+                          <span>Certifications</span>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-
+  
       <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-        <!-- <div class="container"> -->
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>Here's my<span>
-                <button id="gitbtn" class="btn btn-primary py-3 px-5" onclick="gitClick()">GitHub</button>
-              </span>
-            </h2>
-            <div class="heading">
-              <h4>
-                I love to code &amp; create awesome artworks.
-              </h4>
-              <br>
-            </div>
+          <div class="row justify-content-center">
+              <div class="col-md-7 ftco-animate text-center">
+                  <h2>Here's my<span>
+                      <a href="https://github.com/Mehraj7744" class="btn btn-primary py-3 px-5">GitHub</a>
+                  </span></h2>
+                  <div class="heading">
+                      <h4>
+                          I love to code & create innovative web applications.
+                      </h4>
+                      <br>
+                  </div>
+              </div>
           </div>
-        </div>
-        <!-- </div> -->
       </div>
-    </section>
+  </section>
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map-signs"></span>
+          <div class="row justify-content-center mb-5 pb-3">
+              <div class="col-md-7 heading-section text-center ftco-animate">
+                  <h1 class="big big-2">Contact</h1>
+                  <h2 class="mb-4">Contact Me</h2>
+                  <p>Below are the details to reach out to me!</p>
               </div>
-              <h3 class="mb-4">Address</h3>
-              <p>Ambasuger factory, Ambajogai. Dist. Beed. MH Pin 431517</p>
-            </div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
+  
+          <div class="row d-flex contact-info mb-5">
+              <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                  <div class="align-self-stretch box p-4 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="icon-map-signs"></span>
+                      </div>
+                      <h3 class="mb-4">Address</h3>
+                      <p>Ambajogai, Dist. Beed, MH Pin 431517</p>
+                  </div>
               </div>
-              <h3 class="mb-4">Contact Number</h3>
-              <p>
-                <a href="tel://883083457">+91 883-083-4157</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
+              <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                  <div class="align-self-stretch box p-4 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="icon-phone2"></span>
+                      </div>
+                      <h3 class="mb-4">Contact Number</h3>
+                      <p>
+                          <a href="tel://883083457">+91 883-083-4157</a>
+                      </p>
+                  </div>
               </div>
-              <h3 class="mb-4">Email Address</h3>
-              <p>
-                <a href="mailto:mehrajpathan7744.com">mehrajpathan7744@gmail.com</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
+              <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                  <div class="align-self-stretch box p-4 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="icon-paper-plane"></span>
+                      </div>
+                      <h3 class="mb-4">Email Address</h3>
+                      <p>
+                          <a href="mailto:mehrajpathan7744@gmail.com">mehrajpathan7744@gmail.com</a>
+                      </p>
+                  </div>
               </div>
-              <h3 class="mb-4">Download Resume</h3>
-              <p>
-                <a href="https://drive.google.com/file/d/1wwfyZS8U7ugEKsqclaSDsj992mVd_i9L/view?usp=sharing">resumelink</a>
-              </p>
-            </div>
+              <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                  <div class="align-self-stretch box p-4 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="icon-globe"></span>
+                      </div>
+                      <h3 class="mb-4">Download Resume</h3>
+                      <p>
+                          <a href="https://drive.google.com/file/d/1wwfyZS8U7ugEKsqclaSDsj992mVd_i9L/view?usp=sharing">Download</a>
+                      </p>
+                  </div>
+              </div>
           </div>
-
-          <div class="container">
-            <br>
-            <br>
-            <div class="row justify-content-center">
+  
+          <div class="row justify-content-center">
               <div class="col-md-7 ftco-animate text-center">
-                <h2>Have a<span>
-                    Question?
-                  </span>
-                </h2>
-                <div class="que" id="send-message">
-                  <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="43de48a4-fd3e-4b34-8d2f-1ffa403002ca">
-                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                      <div class="col-12">
-                        <label for="fullname" class="form-label">Full Name
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required="required">
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="email" class="form-label">Email
-                          <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewbox="0 0 16 16">
-                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg>
-                          </span>
-                          <input type="email" class="form-control" id="email" name="email" value="" required="required">
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
-                              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                          </span>
-                          <input type="tel" class="form-control" id="phone" name="phone" value="">
-                        </div>
-                      </div><br>
-                      <div class="col-12">
-                        <label for="subject" class="form-label">Subject
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
-                      </div>
-                      <div class="col-12">
-                        <label for="message" class="form-label">Message
-                          <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <div class="d-grid"><br>
-                          <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                  <h2>Have a <span>Question?</span></h2>
+                  <div class="que" id="send-message">
+                      <form action="https://api.web3forms.com/submit" method="POST">
+                          <input type="hidden" name="access_key" value="43de48a4-fd3e-4b34-8d2f-1ffa403002ca">
+                          <div class="row gy-4 p-4">
+                              <div class="col-12">
+                                  <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" id="fullname" name="fullname" required="required">
+                              </div>
+                              <div class="col-12 col-md-6">
+                                  <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                  <div class="input-group">
+                                      <span class="input-group-text">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                          </svg>
+                                      </span>
+                                      <input type="email" class="form-control" id="email" name="email" required="required">
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                  <label for="phone" class="form-label">Phone Number</label>
+                                  <div class="input-group">
+                                      <span class="input-group-text">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                          </svg>
+                                      </span>
+                                      <input type="tel" class="form-control" id="phone" name="phone">
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" id="subject" name="subject" required="required">
+                              </div>
+                              <div class="col-12">
+                                  <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                                  <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
+                              </div>
+                              <div class="col-12">
+                                  <div class="d-grid">
+                                      <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
               </div>
-            </div>
-            <br>
-            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-              <li class="ftco-animate normal-txt">Find me on
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://www.youtube.com/@RishabhMishraOfficial"> <span class="icon-youtube"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.linkedin.com/in/mehraj-pathan-a03532308?">
-                  <span class="icon-linkedin"></span></a>
-              </li>
-              <li class="ftco-animate">
-                <a href="https://twitter.com/Mehraj_Raza_1">
-                  <span class="icon-x"></span></a>
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://twitter.com/rishabhnmishra"> <span class="icon-facebook"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.instagram.com/m3hr4j_kh4n/">
-                  <span class="icon-instagram"></span></a>
-              </li>
-            </ul>
-            <br>
           </div>
-        </div>
-      </section>
+  
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate normal-txt">Find me on</li>
+              <li class="ftco-animate">
+                  <a href="https://www.linkedin.com/in/mehraj-pathan-a03532308?">
+                      <span class="icon-linkedin"></span></a>
+              </li>
+              <li class="ftco-animate">
+                  <a href="https://github.com/Mehraj7744">
+                      <span class="icon-github"></span></a>
+              </li>
+              <li class="ftco-animate">
+                  <a href="https://www.instagram.com/m3hr4j_kh4n/">
+                      <span class="icon-instagram"></span></a>
+              </li>
+          </ul>
+      </div>
+  </section>
 
       <footer class="ftco-footer ftco-section">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p style="display: none;">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This template is made with
-                <i class="icon-heart color-danger" aria-hidden="true"></i>
-                by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy;<script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        All rights reserved | This portfolio is created by Mehraj Pathan, a passionate Software Engineer & Web Developer.
+                        <i class="icon-heart color-danger" aria-hidden="true"></i>
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
+    </footer>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen">
@@ -543,6 +666,8 @@
           window.location.href = 'https://github.com/Mehraj7744';
         }
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     </body>
 
