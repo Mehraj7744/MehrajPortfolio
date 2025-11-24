@@ -106,20 +106,75 @@
       transform: scale(1.1);
     }
 
-    /* ===== Responsive Styles for Portrait Orientation ===== */
-    @media screen and (orientation: portrait) {
-      body {
-        margin-left: 5%;
-        margin-right: 5%;
+    /* ===== Responsive Styles ===== */
+    /* Hero Section Responsiveness */
+    .hero img {
+      max-height: 80vh;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .hero img {
+        max-height: 50vh;
+        /* Reduce height on mobile for better fit */
       }
 
-      .order-md-last {
-        visibility: hidden;
+      .hero .text h1 {
+        font-size: 2rem;
+        /* Smaller heading on mobile */
       }
 
-      .about-img img {
-        content: url("images/me.png");
+      #typing-animation {
+        font-size: 20px;
+        /* Smaller typing text on mobile */
       }
+    }
+
+    @media (max-width: 576px) {
+      .hero img {
+        max-height: 40vh;
+        /* Further reduce on very small screens */
+        margin-top: 20px;
+        padding-top: 0px;
+      }
+
+      .hero .text h1 {
+        font-size: 1.5rem;
+      }
+
+      #typing-animation {
+        font-size: 16px;
+      }
+    }
+
+      /* .gradient-bg {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        border-radius: 20px;
+        padding: 30px;
+        color: white;
+      } */
+
+
+    /* ===== Profile Image Container Styles ===== */
+    .profile-img-container {
+      /* background: linear-gradient(135deg, #35363a 0%, #514e53 100%); */
+      /* Gradient background */
+      /* border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; */
+      /* Egg-like shape */
+      padding: 15px;
+      /* Padding around the image */
+      display: inline-block;
+      /* To fit the content */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Optional shadow for depth */
+    }
+
+    .profile-img-container img {
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      /* Match the container's border-radius */
+      width: 100%;
+      height: auto;
     }
 
     .animated-border {
@@ -129,7 +184,7 @@
       border-radius: 12px;
       font-weight: bold;
       color: #fff;
-background: rgba(15, 23, 42, 0.5);
+      background: rgba(15, 23, 42, 0.5);
       position: relative;
     }
 
@@ -170,7 +225,7 @@ background: rgba(15, 23, 42, 0.5);
     <div class="container">
       <!-- Brand -->
       <a class="navbar-brand font-weight-bold text-white" href="index.html" style="font-size: 1.3rem;">
-        Mehraj <span style="color: #3b82f6;">Pathan</span>
+        Mehraj <span style="color: #5af63b;">Pathan</span>
       </a>
 
       <!-- Toggler -->
@@ -247,9 +302,10 @@ background: rgba(15, 23, 42, 0.5);
             </div>
 
             <!-- Profile Image -->
-            <div class="col-md-6 mb-4 mb-md-0">
-              <img src="images/me.png" alt="Mehraj Pathan" class="img-fluid d-block mx-auto"
-                style="max-height: 80vh; object-fit: contain;">
+            <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+              <div class="profile-img-container gradient-bg">
+                <img src="images/me.webp" alt="Mehraj Pathan" class="img-fluid">
+              </div>
             </div>
 
           </div>
@@ -428,6 +484,8 @@ background: rgba(15, 23, 42, 0.5);
           </div>
         </div>
 
+
+
         <!-- Tools & Platforms -->
         <div class="col-md-6">
           <div class="card bg-dark text-white h-100">
@@ -507,7 +565,8 @@ background: rgba(15, 23, 42, 0.5);
               (plumbers, electricians, carpenters). Implemented authentication & OTP-based
               password recovery, booking system, and admin dashboard.
             </p>
-            <a href="https://fix-mate-home-maintenance-service-p.vercel.app/" class="btn btn-primary mt-3" target="_blank">View
+            <a href="https://fix-mate-home-maintenance-service-p.vercel.app/" class="btn btn-primary mt-3"
+              target="_blank">View
               Project</a>
           </div>
         </div>
